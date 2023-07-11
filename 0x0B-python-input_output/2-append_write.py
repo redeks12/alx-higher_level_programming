@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-def append_write(filename="", text=""):
-    """ function that appends a string returns the number of characters """
+"""This module defines a file-appending function."""
 
-    with open(filename, "a", encoding='utf-8') as f:
+
+def append_write(filename="", text=""):
+    """Appends a string to the end of a UTF8 text file
+    """
+    with open(filename, "a", encoding="utf-8") as f:
         return f.write(text)
