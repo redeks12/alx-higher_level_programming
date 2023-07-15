@@ -13,7 +13,7 @@ class Rectangle(Base):
                 return self.__width
         
         @width.setter
-        def set_width(self, width):
+        def width(self, width):
                 self.valid_int(width, "width")
                 if width <= 0:
                         raise ValueError("width must be > 0")
@@ -23,7 +23,7 @@ class Rectangle(Base):
                 return self.__height
         
         @height.setter
-        def set_height(self, height):
+        def height(self, height):
                 self.valid_int(height,"height")
                 if height <= 0:
                         raise ValueError("height must be > 0")
@@ -32,7 +32,7 @@ class Rectangle(Base):
         def x(self):
                 return self.__x
         @x.setter
-        def set_x(self, x):
+        def x(self, x):
                 self.valid_int(x, "x")
                 if x < 0:
                         raise ValueError("x must be >= 0")
@@ -41,7 +41,7 @@ class Rectangle(Base):
         def y(self):
                 return self.__y
         @y.setter
-        def set_y(self, y):
+        def y(self, y):
                 self.valid_int(y, "y")
                 if y < 0:
                         raise ValueError("y must be >= 0")
