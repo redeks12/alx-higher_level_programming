@@ -9,13 +9,33 @@ class Rectangle(Base):
                 self.set_y(y)
         
         def set_width(self, width):
-                self.__width = width
+                if width != int():
+                        raise TypeError("width must be an integer")
+                elif width <= 0:
+                        raise ValueError("width must be > 0")
+                else:
+                        self.__width = width
         
         def set_height(self, height):
-                self.__height = height
+                if height != int():
+                        raise TypeError("height must be an integer")
+                elif height <= 0:
+                        raise ValueError("height must be > 0")
+                else:
+                        self.__height = height
                 
         def set_x(self, x):
-                self.__x = x
+                if x != int():
+                        raise TypeError("x must be an integer")
+                elif x < 0:
+                        raise ValueError("x must be > 0")
+                else:
+                        self.__x = x
         
         def set_y(self, y):
-                self.__y = y
+                if y != int():
+                        raise TypeError("y must be an integer")
+                elif y < 0:
+                        raise ValueError("y must be > 0")
+                else:
+                        self.__y = y
