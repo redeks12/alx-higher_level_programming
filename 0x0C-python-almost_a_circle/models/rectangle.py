@@ -86,6 +86,9 @@ class Rectangle(Base):
                         self.__update(*args)
                 else:
                         self.__update(**kwargs)
+        
+        def to_dictionary(self):
+                return {"id": self.id, "x": self.x, "y": self.y,"width": self.width, "height": self.height}
                 
         
                         
