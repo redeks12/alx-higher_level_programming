@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from models.base import Base
+'''A representation of the base of our OOP hierarchy.'''
 class Rectangle(Base):
+        '''A representation of the base of our OOP hierarchy.'''
         def __init__(self, width, height, x=0, y=0, id=None):
                 '''Constructor.'''
                 super().__init__(id)
@@ -16,6 +18,7 @@ class Rectangle(Base):
 
         @width.setter
         def width(self, value):
+                '''A representation of the base of our OOP hierarchy.'''
                 self.int_check("width", value, False)
                 self.__width = value
 
@@ -26,6 +29,7 @@ class Rectangle(Base):
 
         @height.setter
         def height(self, value):
+                '''A representation of the base of our OOP hierarchy.'''
                 self.int_check("height", value, False)
                 self.__height = value
 
@@ -36,6 +40,7 @@ class Rectangle(Base):
 
         @x.setter
         def x(self, value):
+                '''A representation of the base of our OOP hierarchy.'''
                 self.int_check("x", value)
                 self.__x = value
 
@@ -46,6 +51,7 @@ class Rectangle(Base):
 
         @y.setter
         def y(self, value):
+                '''A representation of the base of our OOP hierarchy.'''
                 self.int_check("y", value)
                 self.__y = value
 
@@ -58,8 +64,10 @@ class Rectangle(Base):
                 elif not eq and value <= 0:
                     raise ValueError("{} must be > 0".format(name))
         def area(self):
+                '''A representation of the base of our OOP hierarchy.'''
                 return self.height * self.width
         def display(self):
+                '''A representation of the base of our OOP hierarchy.'''
                 for _ in range(self.height):
                         for _ in range(self.x):
                                 print(" ", end="")
@@ -67,9 +75,11 @@ class Rectangle(Base):
                                 print("#",end="")
                         print()
         def __str__(self) -> str:
+                
                return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
         
         def __update(self, id=None, width=None, height=None, x=None, y=None): 
+                '''A representation of the base of our OOP hierarchy.'''
                 if id is not None:
                         self.id = id
                 if width is not None:
@@ -82,10 +92,15 @@ class Rectangle(Base):
                         self.y = y
 
         def update(self, *args, **kwargs):
+                '''A representation of the base of our OOP hierarchy.'''
                 if args:
                         self.__update(*args)
                 else:
                         self.__update(**kwargs)
+        
+        def to_dictionary(self):
+                '''A representation of the base of our OOP hierarchy.'''
+                return {"id": self.id, "x": self.x, "y": self.y,"width": self.width, "height": self.height}
                 
         
                         
