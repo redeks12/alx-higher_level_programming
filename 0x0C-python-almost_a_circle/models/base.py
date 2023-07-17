@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 import json, csv
+'''A representation of the base of our OOP hierarchy.'''
 
 class Base:
+        '''A representation of the base of our OOP hierarchy.'''
         __nb_objects = 0
         
         def __init__(self, id=None) -> None:
+                '''A representation of the base of our OOP hierarchy.'''
                 if id is not None:
                         self.id = id
                 else:
@@ -12,6 +15,8 @@ class Base:
                         self.id = Base.__nb_objects
         @staticmethod           
         def to_json_string(list_dictionaries):
+                '''A representation of the base of our OOP hierarchy.'''
+                '''A representation of the base of our OOP hierarchy.'''
                 if not list_dictionaries or list_dictionaries is None:
                         return []
                 
@@ -19,6 +24,7 @@ class Base:
         
         @classmethod
         def save_to_file(cls, list_objs):
+                '''A representation of the base of our OOP hierarchy.'''
                 if list_objs is not None:
                         list_objs = [o.to_dictionary() for o in list_objs]
                 with open("{}.json".format(cls.__name__), "w") as file:
@@ -26,12 +32,14 @@ class Base:
         
         @staticmethod
         def from_json_string(json_string):
+                '''A representation of the base of our OOP hierarchy.'''
                 if not json_string or json_string is None:
                         return []
                 return json.loads(json_string) 
         
         @classmethod
         def create(cls, **dictionary):
+                '''A representation of the base of our OOP hierarchy.'''
                 from models.rectangle import Rectangle
                 from models.square import Square
                 if cls == Square:
@@ -46,6 +54,7 @@ class Base:
         
         @classmethod
         def load_from_file(cls):
+                '''A representation of the base of our OOP hierarchy.'''
                 from os import path
                 file = "{}.json".format(cls.__name__)
                 if path.isfile(file):
@@ -55,6 +64,7 @@ class Base:
                       
         @classmethod
         def save_to_file_csv(cls, list_objs):
+                '''A representation of the base of our OOP hierarchy.'''
                 from models.rectangle import Rectangle
                 from models.square import Square
                 
@@ -70,6 +80,7 @@ class Base:
         
         @classmethod
         def load_from_file_csv(cls): 
+                '''A representation of the base of our OOP hierarchy.'''
                 from models.rectangle import Rectangle
                 from models.square import Square      
                 main_arr = []         
@@ -101,6 +112,7 @@ class Base:
                 return main_arr
         @staticmethod
         def draw(list_rectangles, list_squares):
+                '''A representation of the base of our OOP hierarchy.'''
                 '''to draw the line representations of the class'''
                 from turtle import Turtle, Screen
                 screen = Screen()
