@@ -8,7 +8,7 @@ db = MySQLdb.connect(
 )
 
 cursor = db.cursor()
-query = "SELECT  id, nameFROM states WHERE name LIKE 'N%' "
+query = "SELECT  * FROM cities"
 cursor.execute(query)
 result = cursor.fetchall()
 
