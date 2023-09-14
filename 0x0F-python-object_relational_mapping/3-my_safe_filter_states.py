@@ -8,7 +8,7 @@ db = MySQLdb.connect(
 )
 
 cursor = db.cursor()
-query = "SELECT * FROM states WHERE name = '{}'; ".format(sys.argv[4])
+query = "SELECT  * FROM states WHERE name ='{}' ".format(sys.argv[4].split("';")[0])
 cursor.execute(query)
 result = cursor.fetchall()
 
