@@ -8,12 +8,12 @@ db = MySQLdb.connect(
 )
 
 cursor = db.cursor()
-query = "SELECT cities.name states.name FROM cities INNER JOIN states ON cities.state_id = states.id"
+query = "SELECT cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id"
 cursor.execute(query)
 result = cursor.fetchall()
 
 for row in result:
-    # if row[2] == sys.argv[4].split("';")[0]:
-    print(row, len(row))
+    if row[1] == sys.argv[4].split("';")[0]:
+        print(row, len(row))
 cursor.close()
 db.close()
