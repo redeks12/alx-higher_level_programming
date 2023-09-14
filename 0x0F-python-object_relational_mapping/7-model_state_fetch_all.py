@@ -2,8 +2,8 @@
 
 import sys
 
-from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 # from model_state import State
@@ -13,8 +13,8 @@ engine = create_engine(
     pool_pre_ping=True,
 )
 
-Base.metadata.create_all(bind=engine)
-Session = sessionmaker()
+# Base.metadata.create_all(bind=engine)
+Session = sessionmaker(bind=engine)
 session = Session()
 
 states = session.query(State).all()
