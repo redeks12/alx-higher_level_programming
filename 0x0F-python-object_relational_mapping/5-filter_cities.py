@@ -15,7 +15,7 @@ cursor.execute(query)
 result = cursor.fetchall()
 
 for row in result:
-    if row[2] == sys.argv[4].split("';")[0]:
-        print(row)
+    # if row[2] == sys.argv[4].split("';")[0]:
+    print(row, len(row))
 cursor.close()
 db.close()
