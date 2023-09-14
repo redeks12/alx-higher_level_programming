@@ -1,8 +1,9 @@
+#!/usr/bin/python3
+
 import sys
 
 from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.orm import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import declarative_base, sessionmaker
 
 # from model_state import State
 
