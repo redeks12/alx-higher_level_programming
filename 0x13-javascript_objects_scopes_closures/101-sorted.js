@@ -10,6 +10,7 @@ for (let key in dict) {
   vals.add(dict[key]);
 }
 
+
 for (const val of vals) {
   let first = [];
   for (let i = 0; i < keys.length; i++) {
