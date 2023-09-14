@@ -20,5 +20,7 @@ states = (
     .filter(State.name == "{}".format(sys.argv[4].split("';")[0]))
     .first()
 )
-for state in states:
-    print("{}".format(state.id))
+if states:
+    print("{}".format(states.id))
+else:
+    print("Not found")
