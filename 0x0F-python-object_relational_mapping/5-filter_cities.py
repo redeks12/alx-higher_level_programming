@@ -12,8 +12,8 @@ query = "SELECT cities.name, states.name FROM cities INNER JOIN states ON cities
 cursor.execute(query)
 result = cursor.fetchall()
 
-for row in result:
-    if row[1] == sys.argv[4].split("';")[0]:
-        print(row, len(row))
+new_row = [row[0] for row in result if row[1] == sys.argv[4].split("';")[0]]
+print(new_row)
+
 cursor.close()
 db.close()
