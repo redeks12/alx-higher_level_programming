@@ -13,7 +13,7 @@ cursor.execute(query)
 result = cursor.fetchall()
 
 new_row = [row[0] for row in result if row[1] == sys.argv[4].split("';")[0]]
-print(new_row)
+print(", ".join(new_row))
 
 cursor.close()
 db.close()
