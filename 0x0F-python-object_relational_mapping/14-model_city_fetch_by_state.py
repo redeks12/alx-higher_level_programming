@@ -28,5 +28,4 @@ if __name__ == "__main__":
     )
 
     for st in cities:
-        print(st)
-        # print("{}: ({}) {}".format(st.id, st.name))
+        print("{}: ({}) {}".format(st.State.name, st.id, st.City.name))
