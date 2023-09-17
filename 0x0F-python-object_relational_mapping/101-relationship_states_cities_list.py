@@ -26,4 +26,8 @@ if __name__ == "__main__":
         .all()
     )
     for city in query:
-        print("{}".format(city.City.name, city.City.id, city.State.name, city.State.id))
+        print(
+            "{} {} {} {}".format(
+                city.City.name, city.City.id, city.State.name, city.State.id
+            )
+        )
