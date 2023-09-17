@@ -3,8 +3,8 @@
 
 import sys
 
-from relationship_city import Base, City
-from relationship_state import State
+from relationship_city import City
+from relationship_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -15,6 +15,7 @@ if __name__ == "__main__":
         ),
         pool_pre_ping=True,
     )
+    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
