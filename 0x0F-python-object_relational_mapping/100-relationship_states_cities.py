@@ -3,8 +3,8 @@
 
 import sys
 
-from relationship_city import City
-from relationship_state import Base, State
+from relationship_city import Base, City
+from relationship_state import State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -20,6 +20,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = State(name="California", cities=City(name="San Francisco"))
+    state = City(name="San Francisco", state=State(name="California"))
     session.add(state)
     session.commit()
