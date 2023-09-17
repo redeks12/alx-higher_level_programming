@@ -5,8 +5,8 @@ import sys
 
 from model_city import City
 from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, join, select
+from sqlalchemy.orm import aliased, sessionmaker
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -18,7 +18,14 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    city = (session.query(City, State.name).join(State)).all()
+
+    city_a = aliased(City)
+    state_a = aliased(State)
+    city = (
+        session.query(state_a.name, city_a.id, city_a.name).join(
+            state_a, state_a.id == city_a.state_id
+        )
+    ).all()
 
     for st in city:
         print(st)
