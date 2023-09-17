@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Contains the class definition of a State
+"""Start link class to table in database 
 """
 
 from sqlalchemy import Column, Integer, String
@@ -15,6 +14,5 @@ class State(Base):
     """
 
     __tablename__ = "states"
-
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
