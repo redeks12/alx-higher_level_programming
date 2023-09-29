@@ -8,7 +8,7 @@ if __name__ == "__main__":
         param = {"q": sys.argv[1]}
     except IndexError:
         param = {"q": ""}
-    response = requests.post("http://0.0.0.0:5000/search_user", params=param)
+    response = requests.post("http://0.0.0.0:5000/search_user", data=param)
     res = response.json()
     print(res)
     print(response.text)
