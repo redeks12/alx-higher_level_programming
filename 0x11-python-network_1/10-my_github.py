@@ -12,3 +12,4 @@ if __name__ == "__main__":
         headers={"password": password, "X-GitHub-Api-Version": "2022 - 11 - 28"},
     )
     print(response.json()["id"])
+    print(response.json())
