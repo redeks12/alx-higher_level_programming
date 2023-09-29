@@ -9,7 +9,10 @@ if __name__ == "__main__":
     password = sys.argv[2]
     response = requests.get(
         "https://api.github.com/user/{}".format(username),
-        headers={"Authorization": password, "X-GitHub-Api-Version": "2022 - 11 - 28"},
+        headers={
+            "Authorization": "token {}".format(password),
+            "X-GitHub-Api-Version": "2022 - 11 - 28",
+        },
     )
     # print(response.json()["id"])
     print(response.json())
