@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-from urllib import request, parse
+"""Write a Python script that fetches data"""
 import sys
+from urllib import parse, request
 
 if __name__ == "__main__":
     params = {"email": sys.argv[2]}

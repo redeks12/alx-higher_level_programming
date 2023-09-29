@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-import requests
+"""Write a Python script that fetches data"""
 import sys
+
+import requests
 
 if __name__ == "__main__":
     param = {"email": sys.argv[2]}

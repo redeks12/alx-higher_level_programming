@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Write a Python script that fetches data"""
 import sys
 
 import requests
