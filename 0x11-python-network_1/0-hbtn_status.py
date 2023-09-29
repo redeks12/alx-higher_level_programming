@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from urllib import request
+import urllib
 
 if __name__ == "__main__":
-    with request.urlopen("https://alx-intranet.hbtn.io/status") as response:
+    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         res = response.read()
         print("Body response:")
         print("\t - type: {}".format(type(res)))
