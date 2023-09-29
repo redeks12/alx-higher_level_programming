@@ -11,7 +11,7 @@ if __name__ == "__main__":
         "https://api.github.com/users/{}".format(username),
         headers={
             "Authorization": "token {}".format(password),
-            "X-GitHub-Api-Version": "2022 - 11 - 28",
+            "Accept": "application/vnd.github.v3+json",
         },
     )
     # print(response.json()["id"])
