@@ -4,5 +4,5 @@ import sys
 
 if __name__ == "__main__":
     param = {"email": sys.argv[2]}
-    response = requests.get(sys.argv[1], params=param)
+    response = requests.post(sys.argv[1], params=param)
     print(response.text)
