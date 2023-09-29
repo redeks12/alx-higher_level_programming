@@ -13,6 +13,10 @@ if __name__ == "__main__":
 
     try:
         for resp in res[:10]:
-            print("{}: {}".format(resp["sha"], resp["commit"]["author"]["name"]))
+            print(
+                "{}: {}".format(
+                    resp.get("sha"), resp.get("commit").get("author").get("name")
+                )
+            )
     except IndexError:
         pass
