@@ -11,4 +11,4 @@ if __name__ == "__main__":
     )
     res = response.json()
     for resp in res:
-        print("{}: {}".format(resp["sha"], resp["author"]["name"]))
+        print("{}: {}".format(resp["sha"], resp["author"]))
