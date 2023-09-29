@@ -10,5 +10,8 @@ if __name__ == "__main__":
         "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], sys.argv[1])
     )
     res = response.json()
-    for resp in res:
-        print("{}: {}".format(resp["sha"], resp["commit"]["author"]["name"]))
+    try:
+        for resp in res[:10]:
+            print("{}: {}".format(resp["sha"], resp["commit"]["author"]["name"]))
+    except IndexError:
+        pass
