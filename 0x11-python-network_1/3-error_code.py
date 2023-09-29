@@ -8,4 +8,4 @@ if __name__ == "__main__":
             res = respose.read()
             print(res.decode("utf-8"))
     except error.HTTPError:
-        print("Error code: {}", res.status_code)
+        print("Error code: {}", respose.status_code)
