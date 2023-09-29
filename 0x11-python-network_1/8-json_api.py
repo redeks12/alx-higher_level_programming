@@ -4,9 +4,9 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    try:
         param = {"q": sys.argv[1]}
-    else:
+    except IndexError:
         param = {"q": ""}
     response = requests.post("http://0.0.0.0:5000/search_user", params=param)
     res = response.json()
