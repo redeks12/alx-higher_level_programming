@@ -13,5 +13,4 @@ if __name__ == "__main__":
         headers={"accept": "application/vnd.github+json"},
         auth=HTTPBasicAuth(username, password),
     )
-    print(response.json())
-    # print(response.json()["id"])
+    print(response.json()["id"])
