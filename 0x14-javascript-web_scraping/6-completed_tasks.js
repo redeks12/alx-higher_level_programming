@@ -9,7 +9,6 @@ request({ url: endpoint, method: "GET", json: true }, (err, res, body) => {
     bas[item.userId] = 0;
   });
   Object.keys(bas).forEach((key) => {
-    console.log(key);
     body.forEach((item) => {
       if (key == item.userId && item.completed === true) {
         bas[item.userId]++;
