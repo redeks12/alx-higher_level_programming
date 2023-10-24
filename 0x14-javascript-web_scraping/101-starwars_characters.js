@@ -18,7 +18,7 @@ setTimeout(() => {
           console.log(bd.name);
         }
       );
-      setTimeout(() => apicalls(urls, index + 1), 1000);
+      setTimeout(() => apicalls(urls, index + 1), 2000);
     }
   };
   apicalls(allUrls, 0);
