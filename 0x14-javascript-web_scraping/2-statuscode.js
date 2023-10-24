@@ -7,6 +7,6 @@ request(endpoint, (err, header) => {
   if (err) {
     console.log(err);
   } else {
-    console.log(`code : ${header.statusCode}`);
+    console.log(`code: ${header.statusCode}`);
   }
 });
