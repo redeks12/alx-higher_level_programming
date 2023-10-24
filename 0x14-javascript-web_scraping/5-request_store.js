@@ -2,8 +2,8 @@
 
 const request = require("request");
 const fs = require("fs");
-const endpoint = process.argv[1];
-const filename = process.argv[2];
+const endpoint = process.argv[2];
+const filename = process.argv[3];
 
 request({ url: endpoint, method: "GET" }, (err, res, body) => {
   if (err) {

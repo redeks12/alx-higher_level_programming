@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require("request");
-const endpoint = process.argv[1];
+const endpoint = process.argv[2];
 
 request(endpoint, (err, header) => {
   if (err) {

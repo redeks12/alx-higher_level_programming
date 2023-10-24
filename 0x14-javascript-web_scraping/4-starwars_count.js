@@ -2,7 +2,7 @@
 
 const request = require("request");
 const id = 18;
-const endpoint = process.argv[1];
+const endpoint = process.argv[2];
 let num = 0;
 
 request({ url: endpoint, method: "GET", json: true }, (err, res, body) => {
